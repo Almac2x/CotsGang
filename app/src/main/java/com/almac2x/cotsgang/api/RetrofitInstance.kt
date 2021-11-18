@@ -3,7 +3,7 @@ package com.almac2x.cotsgang.api
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-private const val BASE_URL :String = "https://jsonplaceholder.typicode.com/" // base url goes here TEMP ONLY!!!!!
+private const val BASE_URL :String = "https://du-announce-tel-imagine.trycloudflare.com/" // base url goes here TEMP ONLY!!!!!
 object RetrofitInstance {
 
     private val retrofit by lazy {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "353492942653",
+    "project_id": "cots-gang-profile",
+    "storage_bucket": "cots-gang-profile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353492942653:android:a48bdaea5d8a9b867ccf54",
+        "android_client_info": {
+          "package_name": "com.almac2x.cotsgang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353492942653-a1ht8fb1eo8lhld2qffqsfm0g4hd771t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAohiZhlOn31PIlv_8O33oKBAnjusKgzfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353492942653-a1ht8fb1eo8lhld2qffqsfm0g4hd771t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
