@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CotsGang</string>
+    <string name="loginText">LOGIN</string>
 </resources>
