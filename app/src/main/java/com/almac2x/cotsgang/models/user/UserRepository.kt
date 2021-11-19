@@ -15,4 +15,8 @@ class UserRepository(private val api : ProjectAPI){
         return api.getUsers()
     }
 
+    suspend fun deleteUser(userID:Int){
+        api.deleteUser(userID)
+    }
+
 }

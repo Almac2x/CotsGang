@@ -10,17 +10,13 @@ import com.almac2x.cotsgang.models.user.User
 import com.almac2x.cotsgang.models.user.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 
 private const val TAG = "MainViewModel"
 class MainViewModel: ViewModel() {
 
-    private lateinit var userRepository: UserRepository
-
-    init {
-
-        userRepository = UserRepository(RetrofitInstance.api)
-    }
+    private var userRepository: UserRepository = UserRepository(RetrofitInstance.api)
 
     private val _users: MutableLiveData<List<User>> = MutableLiveData()
     val users: LiveData<List<User>>
@@ -28,9 +24,48 @@ class MainViewModel: ViewModel() {
 
     fun getUsers(){
         viewModelScope.launch {
-            val fetchedUsers = userRepository.getUsers()
-            Log.i(TAG,"Got Post: $fetchedUsers")
-            _users.value = fetchedUsers
+            try{
+                val fetchedUsers = userRepository.getUsers()
+                Log.i(TAG,"Got Post: $fetchedUsers")
+                _users.value = fetchedUsers
+
+            }catch (e : Exception){
+
+                Log.e(TAG,"Exception: $e")
+
+            }finally {
+
+            }
+
         }
     }
+    fun createUser(user : User){
+        viewModelScope.launch {
+            try {
+                userRepository.createUser(user)
+            } catch (e: Exception) {
+                Log.e(TAG,"Exception: $e")
+
+            } finally {
+
+            }
+        }
+
+
+    }
+
+    fun deleteUser(userID :Int){
+
+        viewModelScope.launch {
+            try {
+                userRepository.deleteUser(userID)
+            } catch (e: Exception) {
+                Log.e(TAG,"Exception: $e")
+
+            } finally {
+
+            }
+      }
+    }
+
 }
